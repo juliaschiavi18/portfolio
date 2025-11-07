@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import { toast, Toaster } from 'sonner';
+import { useState } from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import { toast, Toaster } from "sonner";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,13 +31,13 @@ export default function Contact() {
       !formData.subject ||
       !formData.message
     ) {
-      toast.error('Por favor, preencha todos os campos');
+      toast.error("Por favor, preencha todos os campos");
       return;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      toast.error('Por favor, insira um email válido');
+      toast.error("Por favor, insira um email válido");
       return;
     }
 
@@ -45,16 +45,18 @@ export default function Contact() {
 
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      toast.success('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+      toast.success(
+        "Mensagem enviada com sucesso! Entraremos em contato em breve."
+      );
 
       setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
     } catch (error) {
-      toast.error('Erro ao enviar mensagem. Tente novamente.');
+      toast.error("Erro ao enviar mensagem. Tente novamente.");
     } finally {
       setIsSubmitting(false);
     }
@@ -63,21 +65,21 @@ export default function Contact() {
   const contactInfo = [
     {
       icon: Mail,
-      label: 'Email',
-      value: 'juliaschiavi18@gmail.com',
-      href: 'mailto:juliaschiavi18@gmail.com',
+      label: "Email",
+      value: "juliaschiavi18@gmail.com",
+      href: "mailto:juliaschiavi18@gmail.com",
     },
     {
       icon: Phone,
-      label: 'Telefone',
-      value: '+55 (11) 9999-9999',
-      href: 'tel:+5511999999999',
+      label: "Telefone",
+      value: "+55 (11) 9999-9999",
+      href: "tel:+5511999999999",
     },
     {
       icon: MapPin,
-      label: 'Localização',
-      value: 'São Paulo, Brasil',
-      href: '#',
+      label: "Localização",
+      value: "São Paulo, Brasil",
+      href: "#",
     },
   ];
 
@@ -90,9 +92,12 @@ export default function Contact() {
         {/* Hero Section */}
         <section className="bg-card border-b border-border py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contato</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Entre em Contato
+            </h1>
             <p className="text-lg text-muted-foreground">
-              Tenho interesse em projetos desafiadores. Vamos conversar sobre segurança!
+              Tenho interesse em projetos desafiadores. Vamos conversar sobre
+              segurança!
             </p>
           </div>
         </section>
@@ -102,7 +107,9 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/*  Info */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold mb-8">Informações de Contato</h2>
+              <h2 className="text-2xl font-bold mb-8">
+                Informações de Contato
+              </h2>
               <div className="space-y-6">
                 {contactInfo.map(({ icon: Icon, label, value, href }) => (
                   <a
@@ -126,9 +133,15 @@ export default function Contact() {
                 <h3 className="text-lg font-bold mb-4">Redes Sociais</h3>
                 <div className="flex gap-4">
                   {[
-                    { name: 'GitHub', url: 'https://github.com/juliaschiavi18' },
-                    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/julia-schiavi-10a84b1a5/' },
-                    { name: 'Twitter', url: 'https://twitter.com' },
+                    {
+                      name: "GitHub",
+                      url: "https://github.com/juliaschiavi18",
+                    },
+                    {
+                      name: "LinkedIn",
+                      url: "https://www.linkedin.com/in/julia-schiavi-10a84b1a5/",
+                    },
+                    { name: "Twitter", url: "https://twitter.com" },
                   ].map(({ name, url }) => (
                     <a
                       key={name}
@@ -236,7 +249,7 @@ export default function Contact() {
                   disabled={isSubmitting}
                   className="w-full px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                  {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                 </button>
               </form>
             </div>

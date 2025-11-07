@@ -1,9 +1,17 @@
-import { Link } from 'wouter';
-import { ArrowRight, Code2, Lock, Zap, Shield, AlertTriangle, Eye } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ProjectCard from '../components/ProjectCard';
-import { projects } from '../data/projects';
+import { Link } from "wouter";
+import {
+  ArrowRight,
+  Code2,
+  Lock,
+  Zap,
+  Shield,
+  AlertTriangle,
+  Eye,
+} from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects";
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
@@ -11,33 +19,39 @@ export default function Home() {
   const skills = [
     {
       icon: Lock,
-      title: 'Segurança de Aplicações',
-      description: 'Desenvolvimento seguro com proteção contra OWASP Top 10 e boas práticas de segurança.',
+      title: "Segurança de Aplicações",
+      description:
+        "Desenvolvimento seguro com proteção contra OWASP Top 10 e boas práticas de segurança.",
     },
     {
       icon: AlertTriangle,
-      title: 'Teste de Penetração',
-      description: 'Identificação e exploração de vulnerabilidades em sistemas e redes.',
+      title: "Teste de Penetração",
+      description:
+        "Identificação e exploração de vulnerabilidades em sistemas e redes.",
     },
     {
       icon: Eye,
-      title: 'Análise de Ameaças',
-      description: 'Monitoramento e análise de ameaças em tempo real com resposta a incidentes.',
+      title: "Análise de Ameaças",
+      description:
+        "Monitoramento e análise de ameaças em tempo real com resposta a incidentes.",
     },
     {
       icon: Code2,
-      title: 'Desenvolvimento Full-Stack',
-      description: 'Criação de aplicações web e mobile com foco em segurança e performance.',
+      title: "Desenvolvimento Full-Stack",
+      description:
+        "Criação de aplicações web e mobile com foco em segurança e performance.",
     },
     {
       icon: Shield,
-      title: 'Infraestrutura Segura',
-      description: 'Configuração e manutenção de infraestrutura segura com DevSecOps.',
+      title: "Infraestrutura Segura",
+      description:
+        "Configuração e manutenção de infraestrutura segura com DevSecOps.",
     },
     {
       icon: Zap,
-      title: 'Automação de Segurança',
-      description: 'Automação de processos de segurança e testes com CI/CD seguro.',
+      title: "Automação de Segurança",
+      description:
+        "Automação de processos de segurança e testes com CI/CD seguro.",
     },
   ];
 
@@ -51,17 +65,26 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Olá, sou uma <span className="text-primary">Desenvolvedora</span> Full-Stack
+                Olá, sou uma{" "}
+                <span className="text-primary">Desenvolvedora</span> Full-Stack
               </h1>
               <p className="text-lg text-muted-foreground mb-8">
-                Especializada em cybersecurity, desenvolvimento seguro e proteção de aplicações. Transformo ideias em soluções robustas e seguras.
+                Especializada em cybersecurity, desenvolvimento seguro e
+                proteção de aplicações. Transformo ideias em soluções robustas e
+                seguras.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <Link href="/projects" className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium flex items-center gap-2">
+                <Link
+                  href="/projects"
+                  className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium flex items-center gap-2"
+                >
                   Ver Projetos
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/contact" className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium border border-border">
+                <Link
+                  href="/contact"
+                  className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium border border-border"
+                >
                   Entrar em Contato
                 </Link>
               </div>
@@ -100,9 +123,12 @@ export default function Home() {
         {/* Featured Projects Section */}
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Projetos em Destaque</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Projetos em Destaque
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Confira alguns dos meus trabalhos recentes em cybersecurity e desenvolvimento seguro
+              Confira alguns dos meus trabalhos recentes em cybersecurity e
+              desenvolvimento seguro
             </p>
           </div>
 
@@ -113,7 +139,10 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-            <Link href="/projects" className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-flex items-center gap-2 border border-border">
+            <Link
+              href="/projects"
+              className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-flex items-center gap-2 border border-border"
+            >
               Ver Todos os Projetos
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -127,9 +156,13 @@ export default function Home() {
               Vamos Criar Algo Seguro e Incrível?
             </h2>
             <p className="text-lg mb-8 opacity-90">
-              Tenho interesse em projetos desafiadores que envolvam segurança. Vamos conversar!
+              Tenho interesse em projetos desafiadores que envolvam segurança.
+              Vamos conversar!
             </p>
-            <Link href="/contact" className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-block">
+            <Link
+              href="/contact"
+              className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-block"
+            >
               Entrar em Contato
             </Link>
           </div>

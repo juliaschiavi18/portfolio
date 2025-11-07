@@ -1,7 +1,7 @@
-import { AlertCircle, Home } from 'lucide-react';
-import { Link } from 'wouter';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { AlertCircle, Home } from "lucide-react";
+import { Link } from "wouter";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function NotFound() {
   return (
@@ -30,11 +30,17 @@ export default function NotFound() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/" className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium inline-flex items-center justify-center gap-2">
+            <Link
+              href="/"
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium inline-flex items-center justify-center gap-2"
+            >
               <Home className="w-4 h-4" />
               Voltar para Home
             </Link>
-            <Link href="/projects" className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-block border border-border">
+            <Link
+              href="/projects"
+              className="px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/90 transition-colors font-medium inline-block border border-border"
+            >
               Ver Projetos
             </Link>
           </div>

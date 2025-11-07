@@ -1,13 +1,13 @@
-import { useState, useMemo } from 'react';
-import { Search } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ProjectCard from '../components/ProjectCard';
-import { projects, categories } from '../data/projects';
+import { useState, useMemo } from "react";
+import { Search } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import ProjectCard from "../components/ProjectCard";
+import { projects, categories } from "../data/projects";
 
 export default function Projects() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Projects');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Projects");
 
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
@@ -19,7 +19,7 @@ export default function Projects() {
         );
 
       const matchesCategory =
-        selectedCategory === 'All Projects' ||
+        selectedCategory === "All Projects" ||
         project.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
@@ -34,9 +34,12 @@ export default function Projects() {
         {/* Hero Section */}
         <section className="bg-card border-b border-border py-12">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Meus Projetos</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Meus Projetos
+            </h1>
             <p className="text-lg text-muted-foreground">
-              Explore uma coleção dos meus trabalhos em Cybersecurity e Desenvolvimento Seguro
+              Explore uma coleção dos meus trabalhos em Cybersecurity e
+              Desenvolvimento Seguro
             </p>
           </div>
         </section>
@@ -68,8 +71,8 @@ export default function Projects() {
                     onClick={() => setSelectedCategory(category)}
                     className={`px-4 py-2 rounded-full font-medium transition-colors ${
                       selectedCategory === category
-                        ? 'bg-primary text-primary-foreground'
-                        : 'bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border'
+                        ? "bg-primary text-primary-foreground"
+                        : "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border"
                     }`}
                   >
                     {category}
@@ -82,9 +85,12 @@ export default function Projects() {
           {/* Results Count */}
           <div className="mb-8">
             <p className="text-muted-foreground">
-              {filteredProjects.length} projeto{filteredProjects.length !== 1 ? 's' : ''} encontrado{filteredProjects.length !== 1 ? 's' : ''}
+              {filteredProjects.length} projeto
+              {filteredProjects.length !== 1 ? "s" : ""} encontrado
+              {filteredProjects.length !== 1 ? "s" : ""}
               {searchQuery && ` para "${searchQuery}"`}
-              {selectedCategory !== 'All Projects' && ` em "${selectedCategory}"`}
+              {selectedCategory !== "All Projects" &&
+                ` em "${selectedCategory}"`}
             </p>
           </div>
 

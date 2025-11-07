@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ExternalLink, Shield } from 'lucide-react';
+import { Github, Linkedin, Mail, ExternalLink, Shield } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -6,21 +6,21 @@ export default function Footer() {
   const socialLinks = [
     {
       icon: Github,
-      href: 'https://github.com/juliaschiavi18',
-      label: 'GitHub',
-      ariaLabel: 'Visite meu GitHub',
+      href: "https://github.com/juliaschiavi18",
+      label: "GitHub",
+      ariaLabel: "Visite meu GitHub",
     },
     {
       icon: Linkedin,
-      href: 'https://www.linkedin.com/in/julia-schiavi-10a84b1a5/',
-      label: 'LinkedIn',
-      ariaLabel: 'Visite meu LinkedIn',
+      href: "https://www.linkedin.com/in/julia-schiavi-10a84b1a5/",
+      label: "LinkedIn",
+      ariaLabel: "Visite meu LinkedIn",
     },
     {
       icon: Mail,
-      href: 'mailto:contato@example.com',
-      label: 'Email',
-      ariaLabel: 'Envie um email',
+      href: "mailto:contato@example.com",
+      label: "Email",
+      ariaLabel: "Envie um email",
     },
   ];
 
@@ -35,13 +35,16 @@ export default function Footer() {
               <h3 className="text-lg font-bold text-foreground">SecDev</h3>
             </div>
             <p className="text-muted-foreground">
-              Desenvolvedora full-stack apaixonada por CyberSecurity e segurança de aplicações.
+              Desenvolvedora full-stack apaixonada por CyberSecurity e segurança
+              de aplicações.
             </p>
           </div>
 
           {/*Links */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">Links Rápidos</h3>
+            <h3 className="text-lg font-bold text-foreground mb-4">
+              Links Rápidos
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -72,7 +75,9 @@ export default function Footer() {
 
           {/* Social Links */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-4">Redes Sociais</h3>
+            <h3 className="text-lg font-bold text-foreground mb-4">
+              Redes Sociais
+            </h3>
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href, label, ariaLabel }) => (
                 <a

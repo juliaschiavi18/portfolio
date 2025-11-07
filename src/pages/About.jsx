@@ -1,28 +1,40 @@
-import { Code2, Database, Lock, Zap } from 'lucide-react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Code2, Database, Lock, Zap } from "lucide-react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export default function About() {
   const skills = [
     {
-      category: 'Frontend',
+      category: "Frontend",
       icon: Code2,
-      technologies: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS', 'Next.js'],
+      technologies: [
+        "React",
+        "Vue.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Next.js",
+      ],
     },
     {
-      category: 'Backend',
+      category: "Backend",
       icon: Database,
-      technologies: ['Node.js', 'Python', 'Go', 'PostgreSQL', 'MongoDB'],
+      technologies: ["Node.js", "Python", "Go", "PostgreSQL", "MongoDB"],
     },
     {
-      category: 'Cybersecurity',
+      category: "Cybersecurity",
       icon: Lock,
-      technologies: ['OWASP', 'Penetration Testing', 'Network Security', 'Cryptography', 'Incident Response'],
+      technologies: [
+        "OWASP",
+        "Penetration Testing",
+        "Network Security",
+        "Cryptography",
+        "Incident Response",
+      ],
     },
     {
-      category: 'DevOps & Tools',
+      category: "DevOps & Tools",
       icon: Zap,
-      technologies: ['Docker', 'Kubernetes', 'CI/CD', 'AWS', 'Git', 'Linux'],
+      technologies: ["Docker", "Kubernetes", "CI/CD", "AWS", "Git", "Linux"],
     },
   ];
 
@@ -36,7 +48,8 @@ export default function About() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Sobre Mim</h1>
             <p className="text-lg text-muted-foreground">
-              Conheça minha jornada como desenvolvedora full-stack na área de CyberSecurity
+              Conheça minha jornada como desenvolvedora full-stack na área de
+              CyberSecurity
             </p>
           </div>
         </section>
@@ -49,13 +62,27 @@ export default function About() {
               <h2 className="text-3xl font-bold mb-6">Quem Sou Eu?</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Sou uma profissional de tecnologia apaixonada por desenvolvimento de software e cibersegurança. Minha jornada começou com o Técnico em Informática, onde descobri minha curiosidade por entender como os sistemas funcionam — e, principalmente, como protegê-los. Hoje, curso Engenharia de Software e atuo na área de Cybersecurity, unindo minhas duas grandes paixões: criar e proteger.
+                  Sou uma profissional de tecnologia apaixonada por
+                  desenvolvimento de software e cibersegurança. Minha jornada
+                  começou com o Técnico em Informática, onde descobri minha
+                  curiosidade por entender como os sistemas funcionam — e,
+                  principalmente, como protegê-los. Hoje, curso Engenharia de
+                  Software e atuo na área de Cybersecurity, unindo minhas duas
+                  grandes paixões: criar e proteger.
                 </p>
                 <p>
-                  Ao longo do tempo, participei de projetos voltados à segurança de aplicações, análise de vulnerabilidades e implementação de boas práticas de desenvolvimento seguro. Gosto de enfrentar desafios que envolvem proteção de dados, detecção de ameaças e prevenção de ataques, sempre buscando novas formas de tornar o ambiente digital mais confiável.
+                  Ao longo do tempo, participei de projetos voltados à segurança
+                  de aplicações, análise de vulnerabilidades e implementação de
+                  boas práticas de desenvolvimento seguro. Gosto de enfrentar
+                  desafios que envolvem proteção de dados, detecção de ameaças e
+                  prevenção de ataques, sempre buscando novas formas de tornar o
+                  ambiente digital mais confiável.
                 </p>
                 <p>
-                  Acredito que a segurança deve nascer junto com o código, e não ser adicionada depois. Por isso, busco constantemente aprender, evoluir e aplicar o que sei para construir soluções mais seguras, eficientes e inovadoras. 🚀
+                  Acredito que a segurança deve nascer junto com o código, e não
+                  ser adicionada depois. Por isso, busco constantemente
+                  aprender, evoluir e aplicar o que sei para construir soluções
+                  mais seguras, eficientes e inovadoras. 🚀
                 </p>
               </div>
             </div>
@@ -98,24 +125,25 @@ export default function About() {
 
           {/* Experience Timeline */}
           <div className="mt-20">
-            <h2 className="text-3xl font-bold mb-12">Experiência Profissional</h2>
+            <h2 className="text-3xl font-bold mb-12">
+              Experiência Profissional
+            </h2>
             <div className="space-y-8">
               {[
                 {
-                  title: 'It Analyst & Application Security ',
-                  company: 'Porto ',
-                  period: 'Setembro 2025 - Presente',
+                  title: "It Analyst & Application Security ",
+                  company: "Porto ",
+                  period: "Setembro 2025 - Presente",
                   description:
-                    'Profissional responsável por garantir a segurança e a integridade das aplicações e sistemas de TI, identificando vulnerabilidades e implementando soluções para proteger dados e infraestruturas corporativas.',
+                    "Profissional responsável por garantir a segurança e a integridade das aplicações e sistemas de TI, identificando vulnerabilidades e implementando soluções para proteger dados e infraestruturas corporativas.",
                 },
                 {
-                  title: 'It Analyst - Nucleo ',
-                  company: 'Porto',
-                  period: 'Julho 2025 - Setembro 2025',
+                  title: "It Analyst - Nucleo ",
+                  company: "Porto",
+                  period: "Julho 2025 - Setembro 2025",
                   description:
-                    'Profissional que analisa, mantém e otimiza sistemas e infraestruturas de TI, garantindo seu bom funcionamento, segurança e alinhamento com as necessidades do negócio.',
+                    "Profissional que analisa, mantém e otimiza sistemas e infraestruturas de TI, garantindo seu bom funcionamento, segurança e alinhamento com as necessidades do negócio.",
                 },
-               
               ].map((exp, index) => (
                 <div
                   key={index}
@@ -143,10 +171,13 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-12">Certificados</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
-                { name: 'CyberSecurity - FIAP', year: '2025' },
-                { name: 'DevOps - FIAP', year: '2025' },
-                { name: 'Análise de Dados - Google', year: '2025' },
-                { name: 'Biohacking, Deep Web e Criptografia - FIAP', year: '2025' },
+                { name: "CyberSecurity - FIAP", year: "2025" },
+                { name: "DevOps - FIAP", year: "2025" },
+                { name: "Análise de Dados - Google", year: "2025" },
+                {
+                  name: "Biohacking, Deep Web e Criptografia - FIAP",
+                  year: "2025",
+                },
               ].map((cert, index) => (
                 <div
                   key={index}

@@ -146,7 +146,7 @@ export default function About() {
                 { name: 'CyberSecurity - FIAP', year: '2025' },
                 { name: 'DevOps - FIAP', year: '2025' },
                 { name: 'Análise de Dados - Google', year: '2025' },
-                { name: 'Biohacking, Deep Web e Criptografia', year: '2025' },
+                { name: 'Biohacking, Deep Web e Criptografia - FIAP', year: '2025' },
               ].map((cert, index) => (
                 <div
                   key={index}
